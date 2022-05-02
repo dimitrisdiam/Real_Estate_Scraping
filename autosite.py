@@ -7,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-CHROME_DRIVER_PATH = '/Users/dimitrisdiamantidis/Documents/Development/chromedriver'
+CHROME_DRIVER_PATH = '/Users/USER/Documents/Development/chromedriver'
 
 
 class ZillowScraper:
