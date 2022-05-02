@@ -1,14 +1,11 @@
-import requests
+
 from bs4 import BeautifulSoup
-import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from time import sleep
 
-# import scrapy_splash
 
 CHROME_DRIVER_PATH = '/Users/dimitrisdiamantidis/Documents/Development/chromedriver'
 
@@ -65,18 +62,3 @@ class ZillowScraper:
 
             #New answer.
             WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/div[4]/a'))).click()
-
-            # # Connect.
-            # WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[2]/form/div[2]/div/div[1]/div/div[4]/div/div/a[1]'))).click()
-            # # Email.
-            # self.driver.switch_to.window(self.driver.window_handles[1])
-            # email = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input')))
-            # email.send_keys('bba16114@uom.edu.gr')
-            # email.send_keys(Keys.ENTER)
-            # # Pass.
-            # password = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div[1]/div/div/div/div/div[1]/div/div[1]/input')))
-            # password.send_keys('lu7thoox')
-            # password.send_keys(Keys.ENTER)
-            #
-            # forms = WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[2]/div/div[2]/a/span'))).click()
-
