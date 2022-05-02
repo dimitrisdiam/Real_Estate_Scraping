@@ -20,7 +20,6 @@ HEADERS = {
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36",
 }
-# PARAMS = {'searchQueryState': '{"pagination":{},"mapBounds":{"west":-122.67022170019531,"east":-122.19643629980469,"south":37.703343724016136,"north":37.847169233586946},"mapZoom":11,"isMapVisible":true,"filterState":{"price":{"max":872627},"beds":{"min":1},"fore":{"value":false},"mp":{"max":3000},"auc":{"value":false},"nc":{"value":false},"fr":{"value":true},"fsbo":{"value":false},"cmsn":{"value":false},"fsba":{"value":false}},"isListVisible":true}'}
 
 zillow = ZillowScraper()
 zillow.bring_the_data(ZILLOW_PAGELINK)
