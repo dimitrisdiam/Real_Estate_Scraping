@@ -17,7 +17,7 @@ class ZillowScraper:
         self.driver = webdriver.Chrome(CHROME_DRIVER_PATH)
         self.driver.get(zillow_pagelink)
 
-        # Like a hand.
+        # Automation.
         self.driver.maximize_window()
         for _ in range(20):
             webdriver.ActionChains(self.driver).key_down(Keys.TAB).perform()
@@ -55,10 +55,8 @@ class ZillowScraper:
             else:
                 link_input.send_keys(self.links[address-1])
 
-            # Submit_button
+            # Submit Button.
             WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div/div[2]/form/div[2]/div/div[3]/div[1]/div[1]/div'))).click()
 
-            # print(f"Address: {self.addresses[address-1]}   Price: {self.prices[address-1]}    Link: {self.links[address-1]}")
-
-            #New answer.
+            # New Answer.
             WebDriverWait(self.driver, 15).until(EC.element_to_be_clickable((By.XPATH, '/html/body/div[1]/div[2]/div[1]/div/div[4]/a'))).click()
